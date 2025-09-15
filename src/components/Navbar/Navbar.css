@@ -1,0 +1,72 @@
+/* Navbar */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+  height: 100px;
+}
+
+/* Inner container */
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1350px;   /* ✅ increased width */
+  padding: 0 50px;     /* ✅ more breathing room */
+}
+
+/* Left Side */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* Right Side (menu + button grouped) */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* space between menu and button */
+}
+
+/* Center Menu */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 40px; /* spacing between links */
+}
+
+.navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  color: #a77dff;
+}
+
+/* Right button */
+.hire-btn {
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  background: linear-gradient(90deg, #8b5dff, #ff8bcb);
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.hire-btn:hover {
+  transform: scale(1.05);
+}
