@@ -9,7 +9,7 @@
   justify-content: center;
   background: transparent;
   font-family: 'Poppins', sans-serif;
-  height: 100px;
+  height: 130px; /* ✅ bigger navbar */
 }
 
 /* Inner container */
@@ -18,36 +18,52 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1350px;   /* ✅ increased width */
-  padding: 0 50px;     /* ✅ more breathing room */
+  max-width: 1450px;   /* ✅ more width */
+  padding: 0 60px;     /* ✅ more breathing room */
 }
 
 /* Left Side */
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 28px;
 }
 
-/* Right Side (menu + button grouped) */
+.logo-img {
+  height: 65px;  /* ✅ bigger logo */
+  width: auto;
+}
+
+.email {
+  font-size: 20px; /* ✅ bigger email text */
+  font-weight: 500;
+  color: #b8b8d1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.email:hover {
+  color: #fff;
+}
+
+/* Right Side */
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 40px; /* space between menu and button */
+  gap: 50px; /* ✅ more gap between menu and button */
 }
 
-/* Center Menu */
 .navbar-menu {
   display: flex;
   list-style: none;
-  gap: 40px; /* spacing between links */
+  gap: 50px;
 }
 
 .navbar-menu li a {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px; /* ✅ bigger menu font */
   transition: color 0.3s ease;
 }
 
@@ -55,14 +71,14 @@
   color: #a77dff;
 }
 
-/* Right button */
+/* Button */
 .hire-btn {
-  padding: 14px 30px;
-  border-radius: 30px;
+  padding: 16px 36px;  /* ✅ bigger button */
+  border-radius: 35px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   text-decoration: none;
-  background: linear-gradient(90deg, #8b5dff, #ff8bcb);
+  background: linear-gradient(90deg, #8b5dff, #44096b);
   color: white;
   transition: transform 0.2s ease;
 }

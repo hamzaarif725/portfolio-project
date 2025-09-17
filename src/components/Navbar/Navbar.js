@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navbar.css";
+import Hamzalogo from "../../assets/images/Hamzalogo.png"; // ✅ adjust path based on your project
 
 const Navbar = () => {
   return (
@@ -7,13 +8,13 @@ const Navbar = () => {
       <div className="navbar-inner">
         {/* Left Side */}
         <div className="navbar-left">
-          <div className="logo">G</div>
-          <a href="mailto:mail@gerolddesign.com" className="email">
-            mail@gerolddesign.com
+          <img  src={Hamzalogo} alt="Logo" className="logo-img" />
+          <a href="mailto:hamzaarifdev0@gmail.com" className="email">
+            hamzaarifdev0@gmail.com
           </a>
         </div>
 
-        {/* Right Side (Menu + Button together) */}
+        {/* Right Side (Menu + Button) */}
         <div className="navbar-right">
           <ul className="navbar-menu">
             <li><a href="#services">Services</a></li>
@@ -23,7 +24,7 @@ const Navbar = () => {
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <a href="#hire" className="hire-btn">Hire me!</a>
+          <a href="/Home" className="hire-btn">Hire me!</a>
         </div>
       </div>
     </nav>
