@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Home from "./pages/Home/Home";
+import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
@@ -9,19 +10,31 @@ function App() {
     const scroll = new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]"),
       smooth: true,
-      lerp: 0.08, // lower = smoother (0.05–0.1 is best)
-      multiplier: 1, // scroll speed
+      lerp: 0.08,
+      multiplier: 1,
     });
 
+    // Make scroll instance available globally
+    window.locomotiveScroll = scroll;
+
     return () => {
-      scroll.destroy(); // cleanup on unmount
+      if (window.locomotiveScroll) {
+        window.locomotiveScroll.destroy();
+        window.locomotiveScroll = null;
+      }
     };
   }, []);
 
   return (
-    <div data-scroll-container>
-      <Home />
-    </div>
+    <>
+      {/* ✅ Navbar OUTSIDE locomotive container */}
+      <Navbar />
+
+      {/* ✅ Locomotive applies only here */}
+      <div data-scroll-container>
+        <Home />
+      </div>
+    </>
   );
 }
 

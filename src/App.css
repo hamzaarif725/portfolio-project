@@ -41,21 +41,6 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* ✅ locomotive handles scrolling */
-}
-
-[data-scroll-container] {
-  min-height: 100vh;
-}
-
-
-/* Locomotive Scrollbar customization */
-.c-scrollbar {
-  background: rgb(20, 0, 36); /* track color */
-  width: 6px; /* thickness of the bar */
-}
-
-.c-scrollbar_thumb {
-  background: #ffffff; /* scrollbar thumb color */
-  border-radius: 4px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }

@@ -13,7 +13,7 @@ export default function HeroSection() {
 
       
       {/* Hero Section */}
-      <section className="hero-wrapper">
+      <section id="home"  className="hero-wrapper">
         <div className="hero-container">
           {/* Left Text Section */}
           <div className="hero-text">
@@ -27,24 +27,45 @@ export default function HeroSection() {
             </p>
 
             <div className="cta-section">
-              <a href="/Hamza_CV.pdf" className="download-cv">
+              <a href="/Hamza_CV.pdf" className="download-cv" target="_blank" 
+                rel="noopener noreferrer">
                 <FaDownload className="download-icon" />
                 Download CV
               </a>
-              <div className="social-icons">
-                <a href="https://www.fiverr.com/s/VYeDdN5" className="social-icon">
-                    <TbBrandFiverr />
-                </a>
-                <a href="https://www.linkedin.com/in/hamza-arif-1712251ba/" className="social-icon">
-                  <FaLinkedinIn />
-                </a>
-                <a href="https://www.youtube.com/@hamzaarif222" className="social-icon">
-                  <FaYoutube />
-                </a>
-                <a href="https://github.com/hamzaarif725" className="social-icon">
-                  <FaGithub />
-                </a>
-              </div>
+                        <div className="social-icons">
+              <a 
+                href="https://www.fiverr.com/s/VYeDdN5" 
+                className="social-icon"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <TbBrandFiverr />
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/hamza-arif-1712251ba/" 
+                className="social-icon"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn />
+              </a>
+              <a 
+                href="https://www.youtube.com/@hamzaarif222" 
+                className="social-icon"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <FaYoutube />
+              </a>
+              <a 
+                href="https://github.com/hamzaarif725" 
+                className="social-icon"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </a>
+            </div>
             </div>
           </div>
 
@@ -109,7 +130,7 @@ export default function HeroSection() {
 
 
 {/* Services Section */}
-<section className="services-section">
+<section id="services" className="services-section ">
   <div className="services-header">
     <h2>My Quality Services</h2>
     <p>
@@ -194,7 +215,7 @@ export default function HeroSection() {
 
 
 {/* Resume Section */}
-<section className="resume-section">
+<section id="resume" className="resume-section">
   <div className="resume-container">
 
     {/* Experience Column */}

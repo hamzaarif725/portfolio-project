@@ -4,24 +4,20 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;              /* ✅ always stays above content */
+  z-index: 9999;
   display: flex;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
   height: 130px;
-  background: transparent;    /* ✅ transparent at top */
-  transition: background 0.4s ease, box-shadow 0.4s ease;
+  background: transparent;
+  transition: background 0.4s ease, height 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-
-/* Navbar when scrolled */
+/* When scrolled */
 .navbar.scrolled {
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
-  background: rgba(0, 0, 0, 0.95); /* ✅ black background */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); /* ✅ separation */
+  background: rgba(0, 0, 0, 0.95);
+  height: 90px; /* smaller height */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* Inner container */
@@ -30,7 +26,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1450px; /* ✅ same as hero for alignment */
+  max-width: 1450px;
   padding: 0 60px;
 }
 
@@ -44,6 +40,11 @@
 .logo-img {
   height: 65px;
   width: auto;
+  transition: height 0.3s ease;
+}
+
+.navbar.scrolled .logo-img {
+  height: 50px; /* shrink logo too */
 }
 
 .email {
@@ -71,15 +72,18 @@
   gap: 50px;
 }
 
-.navbar-menu li a {
+/* Menu Buttons */
+.navbar-menu li button {
+  background: none;
+  border: none;
   color: white;
-  text-decoration: none;
   font-weight: 500;
   font-size: 18px;
+  cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.navbar-menu li a:hover {
+.navbar-menu li button:hover {
   color: #a77dff;
 }
 
@@ -99,7 +103,3 @@
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(139, 93, 255, 0.6);
 }
-
-
-
-

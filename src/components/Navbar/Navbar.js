@@ -1,45 +1,68 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import Hamzalogo from "../../assets/images/Hamzalogo.png"; // ✅ adjust path if needed
+import Hamzalogo from "../../assets/images/Hamzalogo.png";
 
 const Navbar = () => {
- const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-useEffect(() => {
-  const handleScroll = () => {
-    if (window.scrollY > 5) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
+  useEffect(() => {
+    const scroll = window.locomotiveScroll;
+
+    if (scroll) {
+      scroll.on("scroll", (args) => {
+        if (args.scroll.y > 50) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
+      });
+    }
+
+    return () => {
+      if (scroll) scroll.off("scroll");
+    };
+  }, []);
+
+  const handleScroll = (id) => {
+    const scroll = window.locomotiveScroll;
+    const target = document.getElementById(id);
+
+    if (scroll && target) {
+      scroll.scrollTo(target, {
+        offset: -90, // adjust for smaller navbar height
+        duration: 1000,
+        easing: [0.25, 0.0, 0.35, 1.0],
+      });
     }
   };
-
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-inner">
         {/* Left Side */}
         <div className="navbar-left">
-          <img src={Hamzalogo} alt="Logo" className="logo-img" />
-          <a href="mailto:hamzaarifdev0@gmail.com" className="email">
-            hamzaarifdev0@gmail.com
-          </a>
+          <img
+            src={Hamzalogo}
+            alt="Logo"
+            onClick={() => handleScroll("home")}
+            className="logo-img"
+          />
+          <span className="email">hamzaarifdev0@gmail.com</span>
         </div>
 
-        {/* Right Side (Menu + Button) */}
+        {/* Right Side */}
         <div className="navbar-right">
           <ul className="navbar-menu">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#works">Works</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><button onClick={() => handleScroll("services")}>Services</button></li>
+            <li><button onClick={() => handleScroll("works")}>Works</button></li>
+            <li><button onClick={() => handleScroll("resume")}>Resume</button></li>
+            <li><button onClick={() => handleScroll("skills")}>Skills</button></li>
+            <li><button onClick={() => handleScroll("testimonials")}>Testimonials</button></li>
+            <li><button onClick={() => handleScroll("contact")}>Contact</button></li>
           </ul>
-          <a href="#hire" className="hire-btn">Hire me!</a>
+          <button onClick={() => handleScroll("home")} className="hire-btn">
+            Hire me!
+          </button>
         </div>
       </div>
     </nav>
