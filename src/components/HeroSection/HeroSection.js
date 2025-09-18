@@ -8,6 +8,10 @@ import { TbBrandFiverr } from "react-icons/tb";
 export default function HeroSection() {
   return (
     <div className="hero-page">
+
+
+
+      
       {/* Hero Section */}
       <section className="hero-wrapper">
         <div className="hero-container">

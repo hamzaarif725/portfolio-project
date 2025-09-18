@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import Hamzalogo from "../../assets/images/Hamzalogo.png"; // ✅ adjust path based on your project
+import Hamzalogo from "../../assets/images/Hamzalogo.png"; // ✅ adjust path if needed
 
 const Navbar = () => {
+ const [scrolled, setScrolled] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 5) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-inner">
         {/* Left Side */}
         <div className="navbar-left">
-          <img  src={Hamzalogo} alt="Logo" className="logo-img" />
+          <img src={Hamzalogo} alt="Logo" className="logo-img" />
           <a href="mailto:hamzaarifdev0@gmail.com" className="email">
             hamzaarifdev0@gmail.com
           </a>
@@ -24,7 +39,7 @@ const Navbar = () => {
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <a href="/Home" className="hire-btn">Hire me!</a>
+          <a href="#hire" className="hire-btn">Hire me!</a>
         </div>
       </div>
     </nav>

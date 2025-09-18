@@ -4,12 +4,24 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 9999;              /* ✅ always stays above content */
   display: flex;
   justify-content: center;
-  background: transparent;
   font-family: 'Poppins', sans-serif;
-  height: 130px; /* ✅ bigger navbar */
+  height: 130px;
+  background: transparent;    /* ✅ transparent at top */
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+
+/* Navbar when scrolled */
+.navbar.scrolled {
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  background: rgba(0, 0, 0, 0.95); /* ✅ black background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); /* ✅ separation */
 }
 
 /* Inner container */
@@ -18,8 +30,8 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1450px;   /* ✅ more width */
-  padding: 0 60px;     /* ✅ more breathing room */
+  max-width: 1450px; /* ✅ same as hero for alignment */
+  padding: 0 60px;
 }
 
 /* Left Side */
@@ -30,12 +42,12 @@
 }
 
 .logo-img {
-  height: 65px;  /* ✅ bigger logo */
+  height: 65px;
   width: auto;
 }
 
 .email {
-  font-size: 20px; /* ✅ bigger email text */
+  font-size: 20px;
   font-weight: 500;
   color: #b8b8d1;
   text-decoration: none;
@@ -50,7 +62,7 @@
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 50px; /* ✅ more gap between menu and button */
+  gap: 50px;
 }
 
 .navbar-menu {
@@ -63,7 +75,7 @@
   color: white;
   text-decoration: none;
   font-weight: 500;
-  font-size: 18px; /* ✅ bigger menu font */
+  font-size: 18px;
   transition: color 0.3s ease;
 }
 
@@ -71,18 +83,23 @@
   color: #a77dff;
 }
 
-/* Button */
+/* Hire Button */
 .hire-btn {
-  padding: 16px 36px;  /* ✅ bigger button */
+  padding: 16px 36px;
   border-radius: 35px;
   font-weight: 600;
   font-size: 18px;
   text-decoration: none;
   background: linear-gradient(90deg, #8b5dff, #44096b);
   color: white;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .hire-btn:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(139, 93, 255, 0.6);
 }
+
+
+
+
