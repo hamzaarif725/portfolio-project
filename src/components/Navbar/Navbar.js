@@ -1,46 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import Hamzalogo from "../../assets/images/Hamzalogo.png";
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const scroll = window.locomotiveScroll;
-
-    if (scroll) {
-      scroll.on("scroll", (args) => {
-        if (args.scroll.y > 50) {
-          setScrolled(true);
-        } else {
-          setScrolled(false);
-        }
-      });
-    }
-
-    return () => {
-      if (scroll) scroll.off("scroll");
-    };
-  }, []);
-
   const handleScroll = (id) => {
-    const scroll = window.locomotiveScroll;
-    const target = document.getElementById(id);
-
-    if (scroll && target) {
-      scroll.scrollTo(target, {
-        offset: -90, // ✅ account for smaller navbar height
-        duration: 1000,
-        easing: [0.25, 0.0, 0.35, 1.0],
-        disableLerp: true, // ✅ fixes iOS/Android smooth scroll issue
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
       });
     }
-    setMenuOpen(false); // ✅ close menu after clicking
+    setMenuOpen(false); // ✅ close menu after click
   };
 
   return (
-    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+    <nav className="navbar">
       <div className="navbar-inner">
         {/* Left Side */}
         <div className="navbar-left">
@@ -63,7 +40,7 @@ const Navbar = () => {
             <li><button onClick={() => handleScroll("testimonials")}>Testimonials</button></li>
             <li><button onClick={() => handleScroll("contact")}>Contact</button></li>
           </ul>
-          <button onClick={() => handleScroll("home")} className="hire-btn">
+          <button onClick={() => handleScroll("hire")} className="hire-btn">
             Hire me!
           </button>
         </div>

@@ -44,7 +44,6 @@
   width: auto;
   transition: height 0.3s ease;
 }
-
 .navbar.scrolled .logo-img {
   height: 50px; /* shrink logo too */
 }
@@ -56,16 +55,16 @@
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
 .email:hover {
   color: #fff;
 }
 
-/* Right Side */
+/* Right Side (Desktop) */
 .navbar-right {
   display: flex;
   align-items: center;
   gap: 50px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .navbar-menu {
@@ -84,7 +83,6 @@
   cursor: pointer;
   transition: color 0.3s ease;
 }
-
 .navbar-menu li button:hover {
   color: #a77dff;
 }
@@ -100,7 +98,6 @@
   color: white;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .hire-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(139, 93, 255, 0.6);
@@ -114,7 +111,6 @@
   cursor: pointer;
   z-index: 10000;
 }
-
 .hamburger span {
   width: 28px;
   height: 3px;
@@ -122,7 +118,6 @@
   border-radius: 3px;
   transition: all 0.3s ease;
 }
-
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translateY(8px);
 }
@@ -133,7 +128,7 @@
   transform: rotate(-45deg) translateY(-8px);
 }
 
-/* Mobile menu */
+/* ✅ Mobile menu */
 @media (max-width: 768px) {
   .email {
     display: none;
@@ -151,7 +146,6 @@
     width: 100%;
     padding: 20px;
     transform: translateY(-200%);
-    transition: transform 0.3s ease-in-out;
   }
 
   .navbar-right.open {
