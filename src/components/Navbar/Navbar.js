@@ -4,6 +4,7 @@ import Hamzalogo from "../../assets/images/Hamzalogo.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const scroll = window.locomotiveScroll;
@@ -34,6 +35,7 @@ const Navbar = () => {
         easing: [0.25, 0.0, 0.35, 1.0],
       });
     }
+    setMenuOpen(false); // close menu after clicking
   };
 
   return (
@@ -51,7 +53,7 @@ const Navbar = () => {
         </div>
 
         {/* Right Side */}
-        <div className="navbar-right">
+        <div className={`navbar-right ${menuOpen ? "open" : ""}`}>
           <ul className="navbar-menu">
             <li><button onClick={() => handleScroll("services")}>Services</button></li>
             <li><button onClick={() => handleScroll("works")}>Works</button></li>
@@ -63,6 +65,16 @@ const Navbar = () => {
           <button onClick={() => handleScroll("home")} className="hire-btn">
             Hire me!
           </button>
+        </div>
+
+        {/* Hamburger */}
+        <div
+          className={`hamburger ${menuOpen ? "active" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </nav>
