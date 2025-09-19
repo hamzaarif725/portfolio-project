@@ -3,6 +3,7 @@ import "./HeroSection.css";
 import profilePic from "../../assets/images/profile2.png"; // Replace with your image
 import { FaLinkedinIn, FaGithub, FaDownload, FaYoutube } from "react-icons/fa";
 import { TbBrandFiverr } from "react-icons/tb";
+import CountUp from "react-countup";
 
 
 export default function HeroSection() {
@@ -79,18 +80,28 @@ export default function HeroSection() {
 
         {/* Statistics Section */}
         <div className="stats-section">
-          <div className="stat-item">
-            <div className="stat-number">7+</div>
-            <div className="stat-label">Years of Experience</div>
+
+         <div className="stat-item">
+          <div className="stat-number">
+            <CountUp start={0} end={7} duration={2} suffix="+" />
           </div>
-          <div className="stat-item">
-            <div className="stat-number">2.5K</div>
-            <div className="stat-label">Projects Completed</div>
+          <div className="stat-label">Years of Experience</div>
+        </div>
+
+                <div className="stat-item">
+          <div className="stat-number">
+            <CountUp start={0} end={2500} duration={2.5} suffix="+" />
           </div>
-          <div className="stat-item">
-            <div className="stat-number">1.5K</div>
-            <div className="stat-label">Satisfied Clients</div>
+          <div className="stat-label">Projects Completed</div>
+        </div>
+
+        <div className="stat-item">
+          <div className="stat-number">
+            <CountUp start={0} end={1500} duration={2.5} suffix="+" />
           </div>
+          <div className="stat-label">Satisfied Clients</div>
+        </div>
+
         </div>
       </section>
 
