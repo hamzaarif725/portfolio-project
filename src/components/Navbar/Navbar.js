@@ -30,12 +30,13 @@ const Navbar = () => {
 
     if (scroll && target) {
       scroll.scrollTo(target, {
-        offset: -90, // adjust for smaller navbar height
+        offset: -90, // ✅ account for smaller navbar height
         duration: 1000,
         easing: [0.25, 0.0, 0.35, 1.0],
+        disableLerp: true, // ✅ fixes iOS/Android smooth scroll issue
       });
     }
-    setMenuOpen(false); // close menu after clicking
+    setMenuOpen(false); // ✅ close menu after clicking
   };
 
   return (
