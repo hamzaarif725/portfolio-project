@@ -731,7 +731,7 @@
 .skill-card {
   background: #140C1C;
   border-radius: 20px;
-  padding: 35px 25px;
+  padding: 25px 25px;
   width: 170px;   /* Bigger card size */
   height: 180px;  /* Fixed height */
   transition: all 0.3s ease;
@@ -768,9 +768,74 @@
 }
 
 .skill-level:hover {
-  color: #9a7dff;
+
+  color:#9a7dff;
 }
 
 .skill-card:hover .skill-logo {
   filter: grayscale(0%);   /* restore original color */
+}
+
+/* =========================
+   Responsive Skills Section
+   ========================= */
+
+/* Tablets and below */
+@media (max-width: 1024px) {
+  .skills-row {
+    gap: 20px;
+  }
+  .skill-card {
+    width: 45%;  /* two in a row if enough space */
+    height: 160px;
+  }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 28px;
+  }
+  .skills-subtitle {
+    font-size: 26px;
+    text-align: center; /* center subtitles for smaller screens */
+  }
+  .skills-row {
+    gap: 15px;
+  }
+  .skill-card {
+    width: 45%; /* two per row */
+    height: 150px;
+  }
+  .skill-logo {
+    width: 50px;
+    height: 50px;
+  }
+  .skill-level {
+    font-size: 16px;
+  }
+  .skill-name {
+    font-size: 14px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .skills-wrapper {
+    padding: 80px 15px;
+  }
+  .skills-title {
+    font-size: 24px;
+  }
+  .skills-subtitle {
+    font-size: 20px;
+  }
+  .skills-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skill-card {
+    width: 90%;   /* full width */
+    height: auto; /* allow auto height */
+  }
 }
