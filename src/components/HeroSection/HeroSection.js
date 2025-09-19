@@ -329,6 +329,108 @@ export default function HeroSection() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+{/* =========================
+    Skills Section
+   ========================= */}
+<section id="skills" className="skills-wrapper">
+  <h2 className="skills-title">My Skills</h2>
+  <p className="skills-text">
+    A perfect blend of creativity and technology – combining web development expertise
+    with professional editing and design skills.
+  </p>
+
+  {/* Development Skills */}
+  <h3 className="skills-subtitle">Web Development</h3>
+  <div className="skills-row">
+    <div className="skill-card">
+      <img src="/react.png" alt="React" className="skill-logo" />
+      <div className="skill-level">85%</div>
+      <p className="skill-name">React</p>
+    </div>
+    <div className="skill-card">
+      <img src="/javascript.svg" alt="JavaScript" className="skill-logo" />
+      <div className="skill-level">80%</div>
+      <p className="skill-name">JavaScript</p>
+    </div>
+    <div className="skill-card">
+      <img src="/bootstrap.png" alt="Bootstrap" className="skill-logo" />
+      <div className="skill-level">93%</div>
+      <p className="skill-name">Bootstrap</p>
+    </div>
+    <div className="skill-card">
+      <img src="/mongodb.png" alt="MongoDB" className="skill-logo" />
+      <div className="skill-level">85%</div>
+      <p className="skill-name">MongoDB</p>
+    </div>
+    <div className="skill-card">
+      <img src="/python.png" alt="Python" className="skill-logo" />
+      <div className="skill-level">82%</div>
+      <p className="skill-name">Python</p>
+    </div>
+  </div>
+
+  {/* Design & Editing Skills */}
+  <h3 className="skills-subtitle">Design & Editing</h3>
+  <div className="skills-row">
+    <div className="skill-card">
+      <img src="/illustrator.png" alt="Illustrator" className="skill-logo" />
+      <div className="skill-level">85%</div>
+      <p className="skill-name">Illustrator</p>
+    </div>
+    <div className="skill-card">
+      <img src="/photoshop.png" alt="Photoshop" className="skill-logo" />
+      <div className="skill-level">80%</div>
+      <p className="skill-name">Photoshop</p>
+    </div>
+    <div className="skill-card">
+      <img src="/premierepro.png" alt="Premiere Pro" className="skill-logo" />
+      <div className="skill-level">89%</div>
+      <p className="skill-name">Premiere Pro</p>
+    </div>
+    <div className="skill-card">
+      <img src="/aftereffects.png" alt="After Effects" className="skill-logo" />
+      <div className="skill-level">79%</div>
+      <p className="skill-name">After Effects</p>
+    </div>
+    <div className="skill-card">
+      <img src="/adobexd.png" alt="Adobe XD" className="skill-logo" />
+      <div className="skill-level">75%</div>
+      <p className="skill-name">Adobe XD</p>
+    </div>
+    <div className="skill-card">
+      <img src="/capcut.webp" alt="CapCut" className="skill-logo" />
+      <div className="skill-level">90%</div>
+      <p className="skill-name">CapCut</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
 
 

@@ -352,7 +352,7 @@
 .services-section {
   background-color: #050709;
   color: #fff;
-  padding: 100px 40px;
+  padding: 140px 40px;
 }
 
 .services-header {
@@ -514,7 +514,7 @@
 /* Resume Section */
 .resume-section {
   background: #050709; /* matches hero theme */
-  padding: 100px 40px 80px;
+  padding: 140px 40px 80px;
   color: #fff;
 }
 
@@ -651,4 +651,126 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   Skills Section
+   ========================= */
+.skills-wrapper {
+  width: 100%;
+  padding: 140px 20px;
+  background: #0F0715;
+  text-align: center;
+  color: white;
+}
+
+.skills-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #cbb3ff;
+}
+
+.skills-text {
+  font-size: 16px;
+  color: #ccc;
+  max-width: 650px;
+  margin: 0 auto 50px auto;
+}
+
+.skills-subtitle {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #cbb3ff;
+}
+
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.skill-card {
+  background: #140C1C;
+  border-radius: 20px;
+  padding: 35px 25px;
+  width: 170px;   /* Bigger card size */
+  height: 180px;  /* Fixed height */
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.skill-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: grayscale(100%);   /* Black & white before hover */
+  transition: all 0.3s ease;
+}
+
+.skill-level {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #aaa;
+}
+
+.skill-name {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #9a7dff;
+}
+
+/* Hover effects */
+.skill-card:hover {
+  background: #2a1f3d;
+  border: 1px solid #8B5DFF;   /* Sharp border */
+  box-shadow: none;            /* No glow */
+}
+
+.skill-level:hover {
+  color: #9a7dff;
+}
+
+.skill-card:hover .skill-logo {
+  filter: grayscale(0%);   /* restore original color */
 }
