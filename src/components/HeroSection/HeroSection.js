@@ -1,12 +1,114 @@
-import React from "react";
+
 import "./HeroSection.css";
 import profilePic from "../../assets/images/profile2.png"; // Replace with your image
 import { FaLinkedinIn, FaGithub, FaDownload, FaYoutube } from "react-icons/fa";
 import { TbBrandFiverr } from "react-icons/tb";
 import CountUp from "react-countup";
-
+import React, { useState, useEffect } from "react";
 
 export default function HeroSection() {
+
+
+const [currentPair, setCurrentPair] = useState(0);
+const [fadeClass, setFadeClass] = useState('fade-in');
+
+// All 8 testimonials data
+const testimonials = [
+  {
+    id: 1,
+    image: "/client1.webp",
+    text: "Great work, first draft was basically exactly what I wanted to see and the small feedback was implemented quicky and without any further amendments.",
+    name: "Gina Macauley",
+    role: "Marketing Director, goodmarketing.uk"
+  },
+  {
+    id: 2,
+    image: "/bitar.jpeg",
+    text: "Hamza’s post-production expertise brought precision and creativity to our medical reels and testimonials, transforming them into polished, engaging content that elevated our brand presence.",
+    name: "George Bitar Marketing Team",
+    role: "Marketing Team, Bitar Cosmetic Surgery Institute"
+  },
+  {
+    id: 3,
+    image: "/client3.jpg",
+    text: "Working with Taylor transformed our digital presence completely. His attention to detail is remarkable.",
+    name: "Sarah Johnson",
+    role: "Marketing Director, Tech Solutions"
+  },
+  {
+    id: 4,
+    image: "/client4.jpg",
+    text: "Outstanding work and professional approach. Taylor exceeded all our expectations.",
+    name: "Mike Chen",
+    role: "CEO, Innovation Labs"
+  },
+  {
+    id: 5,
+    image: "/client5.jpg",
+    text: "Taylor's creative solutions helped us stand out in a competitive market.",
+    name: "Emma Wilson",
+    role: "Founder, Creative Studios"
+  },
+  {
+    id: 6,
+    image: "/client6.jpg",
+    text: "Professional, reliable, and incredibly talented. Highly recommend Taylor's services.",
+    name: "David Rodriguez",
+    role: "Product Manager, StartupCo"
+  },
+  {
+    id: 7,
+    image: "/client7.jpg",
+    text: "Taylor brought our vision to life with exceptional design skills and creativity.",
+    name: "Lisa Anderson",
+    role: "Brand Manager, Fashion Forward"
+  },
+  {
+    id: 8,
+    image: "/client8.jpg",
+    text: "Amazing collaboration and results that truly impacted our business growth.",
+    name: "James Thompson",
+    role: "Director, Digital Agency"
+  }
+];
+
+// Auto-play with fade effect
+useEffect(() => {
+  const interval = setInterval(() => {
+    setFadeClass('fade-out');
+    setTimeout(() => {
+      setCurrentPair((prev) => (prev + 1) % 4);
+      setFadeClass('fade-in');
+    }, 400);
+  }, 10000);
+
+  return () => clearInterval(interval);
+}, []);
+
+// Get current pair of testimonials
+const getCurrentTestimonials = () => {
+  const startIndex = currentPair * 2;
+  return [testimonials[startIndex], testimonials[startIndex + 1]];
+};
+
+const handleDotClick = (index) => {
+  if (index !== currentPair) {
+    setFadeClass('fade-out');
+    setTimeout(() => {
+      setCurrentPair(index);
+      setFadeClass('fade-in');
+    }, 400);
+  }
+};
+
+
+
+
+
+
+
+
+
   return (
     <div className="hero-page">
 
@@ -427,6 +529,70 @@ export default function HeroSection() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* Testimonials Section */}
+<section id="testimonials" className="testimonials-section">
+  <div className="testimonials-container">
+    {/* Left Heading */}
+    <div className="testimonials-left">
+      <h2>
+        My <span>Client's</span> Stories
+      </h2>
+      <p>
+        Empowering people in new a digital journey with my super services
+      </p>
+    </div>
+
+    {/* Right Cards */}
+    <div className="testimonials-right">
+      <div className={`cards-row ${fadeClass}`}>
+        {getCurrentTestimonials().map((testimonial) => (
+          <div key={testimonial.id} className="testimonial-card">
+                        <div className="quote-icon">
+              <img src="/purple_diamond.png" alt="quote icon" />
+            </div>
+            <p className="testimonial-text">
+              "{testimonial.text}"
+            </p>
+            <div className="client-info">
+              <img src={testimonial.image} alt="client" className="client-img" />
+              <div>
+                <p className="client-name">{testimonial.name}</p>
+                <p className="client-role">{testimonial.role}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Dots */}
+      <div className="dots">
+        {[0, 1, 2, 3].map((index) => (
+          <span
+            key={index}
+            className={`dot ${currentPair === index ? 'active' : ''}`}
+            onClick={() => handleDotClick(index)}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
