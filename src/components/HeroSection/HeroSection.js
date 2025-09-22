@@ -30,45 +30,45 @@ const testimonials = [
   },
   {
     id: 3,
-    image: "/client3.jpg",
-    text: "Working with Taylor transformed our digital presence completely. His attention to detail is remarkable.",
-    name: "Sarah Johnson",
-    role: "Marketing Director, Tech Solutions"
+    image: "/shahan.jpg",
+    text: "Your designs during Students Week were vibrant, professional, and truly elevated the spirit of the event. The creativity and polish you brought made a lasting impression.",
+    name: "Dr. Shahan Siddiqui",
+    role: "Head of Department (CS Department), Minhaj University Lahore"
   },
   {
     id: 4,
-    image: "/client4.jpg",
-    text: "Outstanding work and professional approach. Taylor exceeded all our expectations.",
-    name: "Mike Chen",
-    role: "CEO, Innovation Labs"
+    image: "/Mike_ball.jpg",
+    text: "The backbone of my YouTube channels his AI skills and design expertise make my work smooth and professional.",
+    name: "Mike Ball",
+    role: "Former CTO at ShopHitly"
   },
   {
     id: 5,
-    image: "/client5.jpg",
-    text: "Taylor's creative solutions helped us stand out in a competitive market.",
-    name: "Emma Wilson",
-    role: "Founder, Creative Studios"
+    image: "/marco.webp",
+    text: "Executed my YouTube analysis tasks with precision and creativity bringing skill, speed, and a professional edge that exceeded expectations.",
+    name: "Marco Garduño",
+    role: "YouTube Analyst, Fiverr.com"
   },
   {
     id: 6,
-    image: "/client6.jpg",
-    text: "Professional, reliable, and incredibly talented. Highly recommend Taylor's services.",
-    name: "David Rodriguez",
-    role: "Product Manager, StartupCo"
+    image: "/radu.jpg",
+    text: "Delivered top-notch research, design, and post-production across my YouTube channels tech, history, and F1 with creativity and precision that truly stand out.",
+    name: "Radu Ionut",
+    role: "Continental Automotive, Iasi"
   },
   {
     id: 7,
-    image: "/client7.jpg",
-    text: "Taylor brought our vision to life with exceptional design skills and creativity.",
-    name: "Lisa Anderson",
-    role: "Brand Manager, Fashion Forward"
+    image: "/johnny.jpg",
+    text: "I’m a huge fan of gaming, and trust me this guy kept my passion alive with his editing skills and reel expertise. Creative, sharp, and always on point!",
+    name: "Johnny Cronin",
+    role: "U.S. Marine"
   },
   {
     id: 8,
-    image: "/client8.jpg",
-    text: "Amazing collaboration and results that truly impacted our business growth.",
-    name: "James Thompson",
-    role: "Director, Digital Agency"
+    image: "/abda.jpg",
+    text: "Built me a fully functional, modern website that perfectly fit my business needs fast, reliable, and truly professional.",
+    name: "Abdaham Victoire Moncoeur",
+    role: "Vice President, Fundación Alfa Omega Social"
   }
 ];
 

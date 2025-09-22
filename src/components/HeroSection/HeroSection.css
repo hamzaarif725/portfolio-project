@@ -183,12 +183,12 @@
 
 .profile-card:hover {
   transform: rotate(0deg);
-  box-shadow: 0 0 25px rgba(139, 93, 255, 0.4); /* ✅ subtle purple glow */
+  
+   border: 2px solid #8B5DFF;   /* Sharp border */
+  box-shadow: none; 
 }
 
-.profile-card:hover::before {
-  background: linear-gradient(135deg, rgba(139, 93, 255, 0.1), rgba(139, 93, 255, 0.05));
-}
+
 
 .profile-image {
   width: 100%;
@@ -873,7 +873,7 @@
 .testimonials-section {
   width: 100%;
   padding: 120px 20px;
-  background: #0f0715;
+  background: #050709;
   color: white;
 }
 
@@ -898,7 +898,7 @@
 }
 
 .testimonials-left h2 span {
-  background: linear-gradient(90deg, #8b5dff, #ff8bcb);
+  background: linear-gradient(90deg, #8b5dff, #c7d1f3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1012,16 +1012,18 @@
 }
 
 
-
 @media (max-width: 768px) {
   .testimonials-container {
     flex-direction: column;
     gap: 40px;
+    align-items: center;
+    margin-right: 50px;
   }
 
   .testimonials-left {
     max-width: 100%;
     text-align: center;
+     margin-left: 50px;
   }
 
   .testimonials-left h2 {
@@ -1030,10 +1032,14 @@
 
   .cards-row {
     flex-direction: column;
+    gap: 20px;
+    width: 100%; /* ✅ make row take full width */
   }
 
   .testimonial-card {
-    width: 100%;
+    width: 600px;   /* ✅ full width from left to right */
+    max-width: none; 
+    
   }
 }
 
@@ -1044,5 +1050,10 @@
 
   .testimonials-left h2 {
     font-size: 28px;
+  }
+
+  .testimonial-card {
+    width: 100%;   /* ✅ also full width on very small screens */
+    max-width: none;
   }
 }
