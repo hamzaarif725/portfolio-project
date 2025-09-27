@@ -411,7 +411,7 @@ const handleDotClick = (index) => {
 
   {/* Certifications Button */}
 <div className="resume-btn-wrapper">
-  <a href="/certifications" className="resume-btn">
+  <a href="/certificates" className="resume-btn">
     View My Certifications
   </a>
 </div>

@@ -168,3 +168,59 @@
     display: flex;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Add these styles to your existing Navbar.css */
+
+/* Certificates link styling to match your existing menu buttons */
+.nav-certificates-link {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: block;
+  font-family: inherit;
+}
+
+.nav-certificates-link:hover {
+  color: #a77dff;
+}
+
+.nav-certificates-link.active {
+  color: #a77dff;
+  text-shadow: 0 0 10px rgba(167, 125, 255, 0.5);
+}
+
+/* Make sure the certificates link looks exactly like other menu items */
+.navbar-menu li .nav-certificates-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+/* Mobile specific styling for certificates link */
+@media (max-width: 768px) {
+  .navbar-menu li .nav-certificates-link {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+
+
+
