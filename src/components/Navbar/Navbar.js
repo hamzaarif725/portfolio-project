@@ -61,7 +61,15 @@ const Navbar = () => {
         <div className={`navbar-right ${menuOpen ? "open" : ""}`}>
           <ul className="navbar-menu">
             <li><button onClick={() => handleScroll("services")}>Services</button></li>
-            <li><button onClick={() => handleScroll("works")}>Works</button></li>
+                        <li>
+                        <Link 
+                          to="/portfolio" 
+                           className={`nav-portfolio-link ${location.pathname === '/portfolio' ? 'active' : ''}`}
+                            onClick={() => setMenuOpen(false)}
+                                  >
+                Portfolio
+              </Link>
+            </li>
             <li><button onClick={() => handleScroll("resume")}>Resume</button></li>
             <li><button onClick={() => handleScroll("skills")}>Skills</button></li>
             <li><button onClick={() => handleScroll("testimonials")}>Testimonials</button></li>
