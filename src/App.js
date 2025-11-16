@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Certificates from "./components/Certificates/Certificates";
+import Portfolio from "./components/Portfolio/Portfolio";
 
 import "./App.css";
 
@@ -20,6 +21,7 @@ function App() {
           
           {/* Dedicated Certificates page - shows only certificates */}
           <Route path="/certificates" element={<Certificates />} />
+          <Route path="/portfolio" element={<Portfolio />} />
         </Routes>
       </div>
     </Router>
