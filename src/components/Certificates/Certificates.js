@@ -12,7 +12,7 @@ const Certificates = () => {
       date: "June 2025",
       score: "Overall Band Score: 7.5 | CEFR Level: C1",
       category: "English Language",
-      image: "/certificates/ielts-2025.jpg" // placeholder path
+      image: "/certificates/Ielts_1.jpg"
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const Certificates = () => {
       date: "May 2025",
       score: "Completed full course, focused on exam preparation",
       category: "English Language",
-      image: "/certificates/ielts-prep-2025.jpg"
+      image: "/certificates/ielt_training.png"
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ const Certificates = () => {
       date: "July 2022",
       score: "Completed English language course, and prepared for assessment",
       category: "English Language",
-      image: "/certificates/pitman-english-2022.jpg"
+      image: "/certificates/Pitman_training_1.jpg"
     },
     {
       id: 4,
@@ -39,7 +39,7 @@ const Certificates = () => {
       date: "Dec 2021",
       score: "One-year diploma covering software development fundamentals",
       category: "Software Development",
-      image: "/certificates/dse-2021.jpg"
+      image: "/certificates/DSE.jpg"
     },
     {
       id: 5,
@@ -48,7 +48,7 @@ const Certificates = () => {
       date: "Mar 2021",
       score: "Hands-on training in full-stack development using MERN technologies",
       category: "Web Development",
-      image: "/certificates/fullstack-web-2021.jpg"
+      image: "/certificates/6months_web_development_1.jpg"
     },
     {
       id: 6,
@@ -57,7 +57,7 @@ const Certificates = () => {
       date: "Aug 2021",
       score: "Six-month course covering Adobe Creative Suite and design principles",
       category: "Graphic Design",
-      image: "/certificates/fullstack-graphic-2021.jpg"
+      image: "/certificates/Full_stack_graphics_1.jpg"
     },
     {
       id: 7,
@@ -66,7 +66,7 @@ const Certificates = () => {
       date: "Jan 2020",
       score: "Training focused on core design tools and branding",
       category: "Graphic Design",
-      image: "/certificates/graphic-design-2020.jpg"
+      image: "/certificates/Graphic_design_1.jpg"
     },
     {
       id: 8,
@@ -75,7 +75,7 @@ const Certificates = () => {
       date: "Nov 2019",
       score: "Completed animation basics using 3D modeling software",
       category: "3D Animation",
-      image: "/certificates/3ds-animation-2019.jpg"
+      image: "/certificates/3ds_maya_1.jpg"
     },
     {
       id: 9,
@@ -84,7 +84,7 @@ const Certificates = () => {
       date: "August 2019",
       score: "Mastered video editing using Top-Notch editing software",
       category: "Video Editing",
-      image: "/certificates/adobe-premiere-2019.jpg"
+      image: "/certificates/After_effects_1.jpg"
     }
   ];
 

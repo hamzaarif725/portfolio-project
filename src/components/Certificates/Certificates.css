@@ -267,6 +267,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 70px;
   min-height: 500px;
   background: linear-gradient(135deg, 
     rgba(139, 93, 255, 0.1),
@@ -276,7 +277,7 @@
 
 .modal-certificate-image {
   max-width: 100%;
-  max-height: 70vh;
+  max-height: 50vh;
   object-fit: contain;
   border-radius: 10px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
